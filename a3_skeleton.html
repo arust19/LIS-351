@@ -6,18 +6,23 @@ STEP 1: Add the required HTML5 skeleton
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colorado Ski Resorts for Adventure Seekers</title>  #CHANGE: Replace "Site Name" with the actual name of the site
+    <title>Colorado Ski Resorts for Adventure Seekers</title>  
   </head>
 
   <body>
     <!-- =========================================================
     STEP 2: Build the “top area” (site name + navigation) using simple HTML
     ========================================================= -->
-    <h2>Colorado Ski Resorts for Adventure Seekers</h2> 
-      <ul> 
-        <li><a href="#home">Home</a></li>
-        <li><a href="#resorts">Resorts</a></li>
-        <li><a href="#info">Information</a></li>
+    <header>
+      <h1>Colorado Ski Resorts for Adventure Seekers</h1>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#resorts">Resorts</a></li>
+          <li><a href="#info">Information</a></li>
+        </ul>
+      </nav>
+    </header>
       </ul>
 
 
@@ -25,48 +30,61 @@ STEP 1: Add the required HTML5 skeleton
     <!-- =========================================================
     STEP 3: Hero section + “Get Started button” as a link
     ========================================================= -->
-    <h3>Welcome to Colorado Ski Resorts for Adventure Seekers</h3>
-    <p>Discover some of the best and most popular ski destinations in Colorado!</p>
-    <a href="#get-started">Get Started</a>
+    <main>
+      <section class="hero">
+        <h2>Welcome to Colorado Ski Resorts for Adventure Seekers</h2>
+        <p>Discover some of the best and most popular ski destinations in Colorado!</p>
+        <a href="#get-started">Get Started</a>
+      </section>
 
     
 
     <!-- =========================================================
     STEP 4: Features section (3 blocks) + featured content section / Images for each block
     ========================================================= -->
-    <h2>Features</h2>
-    <div class="feature-block">
-      <h3>Breckenridge</h3>
-      <p>Description of Feature 1.</p>
-      <img src="images/breckenridge.jpg" alt="Describe Image here" />
-    </div>
-    <div class="feature-block">
-      <h3>Vail</h3>
-      <p>Description of Feature 2.</p>
-      <img src="images/vail.jpg" alt="Describe Image here" />
-    </div>
-    <div class="feature-block">
-      <h3>Copper Mountain</h3>
-      <p>Description of Feature 3.</p>
-      <img src="images/coppermountain.png" alt="Describe Image here" />
-    </div>
+     <section class="features">
+        <h2>Features</h2>
+        <div class="feature-block">
+          <h3>Breckenridge</h3>
+          <p>This breathtaking resort offers world-class skiing and stunning mountain views.</p>
+          <img src="images/breckenridge.jpg" alt="Describe the Breckenridge photo here" />
+        </div>
+        <div class="feature-block">
+          <h3>Vail</h3>
+          <p>This world-renowned resort features exceptional terrain and a vibrant alpine village.</p>
+          <img src="images/vail.jpg" alt="Describe the Vail photo here" />
+        </div>
+        <div class="feature-block">
+          <h3>Copper Mountain</h3>
+          <p>This family-friendly resort offers diverse terrain and a charming mountain town.</p>
+          <img src="images/coppermountain.png" alt="Describe the Copper Mountain photo here" />
+        </div>
+      </section>
+
+      <section class="featured-content">
+        <h2>Featured Content</h2>
+        <p>Highlight one resort or guide here.</p>
+      </section>
 
     <!-- =========================================================
     STEP 5: Two secondary content blocks + CTA section 
     ========================================================= -->
-    <div class="secondary-content">
-      <h3>Secondary Content Block 1</h3>
-      <p>Details about the first secondary content block.</p>
-    </div>
-    <div class="secondary-content">
-      <h3>Secondary Content Block 2</h3>
-      <p>Details about the second secondary content block.</p>
-    </div>
-    <div class="cta-section">
-      <h3>Call to Action</h3>
-      <p>Encourage users to take action with a compelling message.</p>
-      <a href="#cta-link">Take Action</a>
-    </div>
+    <section class="secondary-content">
+        <h2>Secondary Content Block 1</h2>
+        <p>Details about the first secondary content block.</p>
+      </section>
+      <section class="secondary-content">
+        <h2>Secondary Content Block 2</h2>
+        <p>Details about the second secondary content block.</p>
+      </section>
+
+
+    <section class="cta-section">
+        <h2>Heard enough?</h2>
+        <p>Encourage users to take action with a compelling message.</p>
+        <a href="#cta-link">Plan Your Trip</a>
+      </section>
+  </main>
 
     
 
@@ -74,6 +92,13 @@ STEP 1: Add the required HTML5 skeleton
     STEP 6: Footer 
     ========================================================= -->
     <footer>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#resorts">Resorts</a></li>
+          <li><a href="#info">Information</a></li>
+        </ul>
+      </nav>
       <p>&copy; 2026 Colorado Ski Resorts for Adventure Seekers. All rights reserved.</p>
     </footer>
   </body>

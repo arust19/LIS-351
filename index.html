@@ -7,24 +7,27 @@ STEP 1: Add the required HTML5 skeleton
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Colorado Ski Resorts for Adventure Seekers</title>  
+    
+    <!-- Linked Style sheet-->
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
     <!-- =========================================================
     STEP 2: Build the “top area” (site name + navigation) using simple HTML
     ========================================================= -->
-    <header>
-      <h1>Colorado Ski Resorts for Adventure Seekers</h1>
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#resorts">Resorts</a></li>
-          <li><a href="#info">Information</a></li>
-        </ul>
-      </nav>
+    <header id="home">
+      <div class="header-inner">
+        <h1 class="brand">Colorado Ski Resorts for Adventure Seekers</h1>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#resorts">Resorts</a></li>
+            <li><a href="#info">Information</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
-
 
     <!-- =========================================================
     STEP 3: Hero section + “Get Started button” as a link
@@ -33,7 +36,7 @@ STEP 1: Add the required HTML5 skeleton
       <section class="hero">
         <h2>Welcome to Colorado Ski Resorts for Adventure Seekers</h2>
         <p>Discover some of the best and most popular ski destinations in Colorado!</p>
-        <a href="#get-started">Get Started</a>
+        <a class="btn btn-filled" href="#get-started">Get Started</a>
       </section>
 
     
@@ -41,9 +44,9 @@ STEP 1: Add the required HTML5 skeleton
     <!-- =========================================================
     STEP 4: Features section (3 blocks) + featured content section / Images for each block
     ========================================================= -->
-     <section class="features">
-        <h2>Features</h2>
-        <div class="feature-block">
+     <section class="features" id="resorts">
+        <h2>Resorts</h2>
+        <div class="feature-block" id="get-started">
           <h3>Breckenridge</h3>
           <p>This breathtaking resort offers world-class skiing and stunning mountain views.</p>
           <img src="images/breckenridge.jpg" alt="Front of Breckenridge ski resort" >

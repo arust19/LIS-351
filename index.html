@@ -1,25 +1,18 @@
-<!-- =========================================================
-STEP 1: Add the required HTML5 skeleton
-========================================================= -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Colorado Ski Resorts for Adventure Seekers</title>  
-    
-    <!-- Linked Style sheet-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Ski Resorts for Adventure Seekers</title>
     <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <!-- =========================================================
-    STEP 2: Build the “top area” (site name + navigation) using simple HTML
-    ========================================================= -->
-    <header id="home">
+    <!-- Header: brand left, nav right (TODO A) -->
+    <header class="site-header" id="home">
       <div class="header-inner">
-        <h1 class="brand">Colorado Ski Resorts for Adventure Seekers</h1>
-        <nav aria-label="Main">
+        <h1 class="brand"><span class="dot" aria-hidden="true">&#9679;</span> Colorado Ski Resorts for Adventure Seekers</h1>
+        <nav class="site-nav" aria-label="Main">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#resorts">Resorts</a></li>
@@ -29,80 +22,91 @@ STEP 1: Add the required HTML5 skeleton
       </div>
     </header>
 
-    <!-- =========================================================
-    STEP 3: Hero section + “Get Started button” as a link
-    ========================================================= -->
     <main>
+      <!-- Hero -->
       <section class="hero">
-        <h2>Welcome to Colorado Ski Resorts for Adventure Seekers</h2>
-        <p>Discover some of the best and most popular ski destinations in Colorado!</p>
-        <a class="btn btn-filled" href="#get-started">Get Started</a>
-      </section>
-
-    
-
-    <!-- =========================================================
-    STEP 4: Features section (3 blocks) + featured content section / Images for each block
-    ========================================================= -->
-     <section class="features" id="resorts">
-        <h2>Resorts</h2>
-        <div class="feature-block" id="get-started">
-          <h3>Breckenridge</h3>
-          <p>This breathtaking resort offers world-class skiing and stunning mountain views.</p>
-          <img src="images/breckenridge.jpg" alt="Front of Breckenridge ski resort" >
-        </div>
-        <div class="feature-block">
-          <h3>Vail</h3>
-          <p>This world-renowned resort features exceptional terrain and a vibrant alpine village.</p>
-          <img src="images/vail.jpg" alt="View from the top of Vail ski resort" >
-        </div>
-        <div class="feature-block">
-          <h3>Copper Mountain</h3>
-          <p>This family-friendly resort offers diverse terrain and a charming mountain town.</p>
-          <img src="images/coppermountain.png" alt="Aerial view of Copper Mountain ski resort" >
+        <div class="hero-content">
+          <h2>Welcome to Colorado Ski Resorts for Adventure Seekers</h2>
+          <p class="hero-subhead">Discover some of the best and most popular ski destinations in Colorado!</p>
+          <a class="btn btn-dark" href="#get-started">Get Started</a>
         </div>
       </section>
 
-      <section class="featured-content">
-        <h2>Featured Resort: Vail</h2>
-        <p>Vail is one of the largest ski resorts in the United States, known for its wide open Back Bowls, long groomed runs, and a pedestrian-friendly village at the base. Advanced skiers can chase powder in the bowls, while beginners and intermediates have plenty of gentle terrain to build confidence. If you only have time to visit one resort this season, Vail offers a bit of everything.</p>
-        <img src="images/vail-back-bowls.png" alt="Skiers crossing open powder in Vail's Back Bowls" >
+      <!-- Features: 3 columns -->
+      <section class="features" id="resorts">
+        <h2 class="section-title">Resorts</h2>
+        <div class="features-grid" id="get-started">
+          <div class="feature">
+            <h3>Breckenridge</h3>
+            <p>This breathtaking resort offers world-class skiing and stunning mountain views.</p>
+            <img src="images/breckenridge.jpg" alt="Front of Breckenridge ski resort">
+          </div>
+          <div class="feature">
+            <h3>Vail</h3>
+            <p>This world-renowned resort features exceptional terrain and a vibrant alpine village.</p>
+            <img src="images/vail.jpg" alt="View from the top of Vail ski resort">
+          </div>
+          <div class="feature">
+            <h3>Copper Mountain</h3>
+            <p>This family-friendly resort offers diverse terrain and a charming mountain town.</p>
+            <img src="images/coppermountain.png" alt="Aerial view of Copper Mountain ski resort">
+          </div>
+        </div>
       </section>
 
-    <!-- =========================================================
-    STEP 5: Two secondary content blocks + CTA section 
-    ========================================================= -->
-    <section class="secondary-content">
-        <h2>When to Go</h2>
-        <p>Colorado's ski season typically runs from November through April. Early winter offers smaller crowds, while February and March bring deep snowpack and the most reliable conditions.</p>
-      </section>
-      <section class="secondary-content">
-        <h2>Planning Your Trip</h2>
-        <p>Most travelers fly into Denver International Airport and drive west on I-70 to reach resorts like Breckenridge, Vail, and Copper Mountain. Winter traffic and mountain weather can slow the trip, so leave extra time and check road conditions before you go.</p>
+      <!-- Featured content -->
+      <section class="featured">
+        <h2 class="section-title">Featured Resort: Vail</h2>
+        <p class="section-lede">Vail is one of the largest ski resorts in the United States, known for its wide open Back Bowls, long groomed runs, and a pedestrian-friendly village at the base. Advanced skiers can chase powder in the bowls, while beginners and intermediates have plenty of gentle terrain to build confidence. If you only have time to visit one resort this season, Vail offers a bit of everything.</p>
+        <div class="media">
+          <img src="images/vail-back-bowls.png" alt="Skiers crossing open powder in Vail's Back Bowls">
+        </div>
       </section>
 
+      <!-- Secondary content: 2 cards -->
+      <section class="secondary" id="info">
+        <div class="secondary-grid">
+          <article class="card">
+            <div class="card-text">
+              <h2>When to Go</h2>
+              <p>Colorado's ski season typically runs from November through April. Early winter offers smaller crowds, while February and March bring deep snowpack and the most reliable conditions.</p>
+            </div>
+            <div class="card-image img-a" aria-hidden="true"></div>
+          </article>
+          <article class="card">
+            <div class="card-text">
+              <h2>Planning Your Trip</h2>
+              <p>Most travelers fly into Denver International Airport and drive west on I-70 to reach resorts like Breckenridge, Vail, and Copper Mountain. Winter traffic and mountain weather can slow the trip, so leave extra time and check road conditions before you go.</p>
+            </div>
+            <div class="card-image img-b" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
 
-    <section class="cta-section">
-      <h2>Heard enough?</h2>
-      <p>The powder is waiting. Pick your resort, book your lift tickets, and get ready for a season of Colorado adventure.</p>
-      <a href="#resorts">Plan Your Trip</a>
-    </section>
-  </main>
+      <!-- CTA -->
+      <section class="cta">
+        <div class="cta-inner">
+          <h2>Heard enough?</h2>
+          <p>The powder is waiting. Pick your resort, book your lift tickets, and get ready for a season of Colorado adventure.</p>
+          <a class="btn btn-outline" href="#resorts">Plan Your Trip</a>
+        </div>
+      </section>
+    </main>
 
-    
-
-    <!-- =========================================================
-    STEP 6: Footer 
-    ========================================================= -->
-    <footer>
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#resorts">Resorts</a></li>
-          <li><a href="#info">Information</a></li>
-        </ul>
-      </nav>
-      <p>&copy; 2026 Colorado Ski Resorts for Adventure Seekers. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p>&copy; 2026 Colorado Ski Resorts for Adventure Seekers. All rights reserved.</p>
+        </div>
+        <nav class="footer-cols" aria-label="Footer">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="#home">Home</a>
+            <a href="#resorts">Resorts</a>
+            <a href="#info">Information</a>
+          </div>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>

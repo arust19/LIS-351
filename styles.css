@@ -1,53 +1,343 @@
-* {
-	font-family: Arial, Verdana, sans-serif;
-	color: #023e0f;
-	text-align: center;
+/* a4stylesheet.css
+   A4: Intro CSS Fill-in Template
+   Instructions: rename this file to styles.css and complete each TODO block.
+*/
+
+
+/* Color scheme */
+
+:root {
+  --text: #023e0f;
+  --bg: #d0d0d4;
+  --panel: #e6e6ea;
+  --accent: #5e88be;
+  --accent-2: #68a2b5;
+  --accent-dark: #1f4f82;
+  --border: #ebeae5;
+  --gold: #f5c542;
+}
+
+
+/* ===== Base styles (mostly done) ===== */
+* { box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
-	width: 960px;
-	margin: 0 auto;
-	background-color: #d0d0d4;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  text-align: center;
 }
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Boxed headings (h3 is underlined instead) */
 h1, h2 {
-	border: 2px solid #ebeae5;
-	border-radius: 8px;
-	padding: 10px;
-	background-color: #5e88be;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--accent);
 }
-/* Underline with more control */
+h2 { font-size: 26px; }
 h3 {
-	text-decoration: underline;
-	text-decoration-color: #f5c542;
-	text-decoration-thickness: 3px;
-	text-underline-offset: 6px;
-	font-size: 28px;
+  font-size: 22px;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
 }
 
-nav ul {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-	list-style: none;
-	padding: 0;
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+  padding: 14px 20px;
 }
 
-nav a {
-	display: block;
-	border: 2px solid #ebeae5;
-	border-radius: 8px;
-	padding: 10px 20px;
-	background-color: #68a2b5;
-	text-decoration: none;
+/* TODO A: brand left, nav right */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+ 
+.brand {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
 }
 
-nav a:hover {
-	background-color: #ebeae5;
-	color: #39395f;
+/* TODO B: light blue dot */
+.brand .dot {
+  color: #bfe0ff;
 }
 
-.feature-block img {
-	width: 500px;
-	height: 300px;
-	object-fit: cover;
+.site-nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  display: block;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: var(--accent-2);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+.site-nav a:hover {
+  background-color: var(--border);
+  color: #39395f;
+  text-decoration: none;
+}
+
+
+/* ===== Hero ===== */
+/* TODO C: background image + light overlay + min-height */
+.hero {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+              url("images/vail-back-bowls.png") center / cover no-repeat;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TODO D: centered content with vertical padding */
+.hero-content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* TODO E: large uppercase headline (the hero heading is an h2 in my HTML) */
+.hero h2 {
+  margin: 0;
+  border: none;
+  background: transparent;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+/* TODO F: smaller, softer subhead */
+.hero-subhead {
+  margin: 6px 0 22px;
+  font-size: 22px;
+  color: #333;
+}
+
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+ 
+/* TODO G: dark filled button */
+.btn-dark {
+  background: #023e0f;
+  color: #fff;
+}
+
+.btn-dark:hover { background: #0a5a1c; text-decoration: none; }
+ 
+/* TODO H: outline button */
+.btn-outline {
+  border: 2px solid var(--accent-dark);
+  color: var(--accent-dark);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: var(--accent-dark);
+  color: #fff;
+  text-decoration: none;
+}
+ 
+
+
+/* ===== Features (3 columns) ===== */
+.features { padding: 42px 20px; }
+ 
+/* TODO I: flex row with gap */
+.features-grid {
+  display: flex;
+  gap: 26px;
+}
+ 
+/* TODO J: equal width, centered text */
+.feature {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+ 
+.feature img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 42px 20px 36px;
+  background: var(--panel);
+}
+ 
+.section-title {
+  text-align: center;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+ 
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 22px;
+  color: #333;
+  font-size: 15px;
+}
+ 
+.media {
+  border: 1px solid var(--border);
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 20px auto;
+}
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary { padding: 34px 20px 44px; }
+ 
+/* TODO K: two cards side by side */
+.secondary-grid {
+  display: flex;
+  gap: 26px;
+}
+ 
+/* TODO L: bordered, equal-width cards */
+.card {
+  flex: 1;
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+ 
+.card-text { padding: 18px; }
+.card-text h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.card-text p {
+  margin: 0 0 14px;
+  font-size: 13px;
+}
+ 
+/* TODO M: image block behaves like a background image */
+.card-image {
+  min-height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+ 
+
+/* Optional images (already provided) */
+.img-a {
+  background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60");
+}
+.img-b {
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=60");
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: var(--panel);
+  padding: 42px 20px;
+}
+ 
+/* TODO N: centered CTA */
+.cta-inner {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+ 
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  padding: 24px 20px;
+}
+ 
+/* TODO O: left text, link columns on the right */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+ 
+.footer-left {
+  max-width: 360px;
+  font-size: 12px;
+  text-align: left;
+}
+ 
+.footer-cols {
+  display: flex;
+  gap: 28px;
+}
+ 
+.footer-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-col h4 {
+  width: 100%;             /* keeps "Explore" on its own line above the boxes */
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-col a {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: var(--accent-2);
+  font-size: 12px;
+}
+
+.footer-col a:hover {
+  background-color: var(--border);
+  text-decoration: none;
 }
